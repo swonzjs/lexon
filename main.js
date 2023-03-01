@@ -103,7 +103,7 @@ require('./database/connect.js')(
 
 /*=======================================================================================*/
 
-client.login(config.token).then(() => {
+client.login(process.env.token).then(() => {
   console.log('(!) Token doğrulandı, giriş yapılıyor...');
 }).catch(() => {
   console.error('(!) Token hatalı, kontrol ediniz...');
